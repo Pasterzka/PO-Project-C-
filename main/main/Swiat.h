@@ -28,5 +28,11 @@ public:
 	void CzyscLog();
 	void DodajLog(std::string log);
 	void DorastanieStart();
+	void GetLogi();
+	int getIndexOrganizmu(int x, int y);
+	void UsunOrganizm(int index);
+	Organizm* GetOrganizm(int x, int y);
+	std::string GetTypOrganizmu(Organizm* organizm);
+	int GetDlougoscOrganizmow();
 	~Swiat();
 };

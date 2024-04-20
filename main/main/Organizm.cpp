@@ -25,6 +25,22 @@ int Organizm::getWiek()
 	return this->wiek;
 }
 
+int Organizm::getInicjatywa() const
+{
+	return this->inicjatywa;
+}
+
+void Organizm::setSila(int i)
+{
+	this->sila = sila + i;
+}
+
+int Organizm::getSila()
+{
+	return this->sila;
+}
+
+
 void Organizm::Wypisz()
 {
 	Gotoxy(pozycjaX + 1, pozycjaY + 3);

@@ -22,7 +22,7 @@ void Mlecz::Wypisz()
 	std::cout << "M";
 }
 
-void Mlecz::Kolizja()
+void Mlecz::Kolizja(Organizm* organizmy)
 {
 }
 

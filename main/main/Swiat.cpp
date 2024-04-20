@@ -1,8 +1,24 @@
 #include "Swiat.h"
 #include <conio.h>
+#include <algorithm>
+#include "Funkcje.h"
+
+
+#include "Czlowiek.h"
+#include "Owca.h"
+#include "Wilk.h"
+#include "Lis.h"
+#include "Zolw.h"
+#include "Antylopa.h"
+
+#include "Trawa.h"
+#include "Mlecz.h"
+#include "WilczeJagody.h"
+#include "Guarana.h"
+#include "BarszczSosnowskiegp.h"
 
 Swiat::Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* organizmy)
-	:wysokosc(wysokosc), szerokosc(szerokosc), organizmy(organizmy), tura(0)
+	:wysokosc(wysokosc), szerokosc(szerokosc), organizmy(organizmy), tura(1)
 {
 }
 
@@ -26,7 +42,8 @@ unsigned Swiat::GetSzerokosc() const
 void Swiat::NastêpnaTura()
 {
 	tura++;
-
+	std::sort(organizmy->begin(), organizmy->end(), [](Organizm* a, Organizm* b) {
+		return a->getInicjatywa() > b->getInicjatywa(); });
 	for (int i = 0; i < organizmy->size(); i++)
 	{
 		if ((*organizmy)[i]->getWiek()>0)
@@ -69,10 +86,6 @@ void Swiat::Wypisz()
 		organizm->Wypisz();
 	}
 
-	Gotoxy(1, wysokosc + 9);
-	std::cout << "Logi z aktualnej tury";
-	Gotoxy(1, wysokosc + 10);
-	std::cout << this->log;
 }
 
 bool Swiat::OrganizmXY(int x, int y)
@@ -103,6 +116,100 @@ void Swiat::DorastanieStart()
 	{
 		(*organizmy)[i]->Dorastanie();
 	}
+}
+
+void Swiat::GetLogi()
+{
+	Gotoxy(1, wysokosc + 9);
+	std::cout << "Logi z aktualnej tury:" << tura - 1;
+	Gotoxy(1, wysokosc + 10);
+	std::cout << this->log;
+}
+
+int Swiat::getIndexOrganizmu(int x, int y)
+{
+	for (int i = 0; i < organizmy->size(); i++)
+	{
+		(*organizmy)[i]->Dorastanie();
+		if ((*organizmy)[i]->GetPozycjaX() == x && (*organizmy)[i]->GetPozycjaY() == y)
+		{
+			return i;
+		}
+	}
+}
+
+void Swiat::UsunOrganizm(int index)
+{
+	// SprawdŸ, czy index jest poprawny
+	if (index >= 0 && static_cast<size_t>(index) < organizmy->size()) {
+		// Usuñ element ze wskazanego indeksu
+		delete (*organizmy)[index]; // Zwolnienie pamiêci zaalokowanej na obiekt
+		organizmy->erase(organizmy->begin() + index); // Usuniêcie wskaŸnika z wektora
+	}
+}
+
+Organizm* Swiat::GetOrganizm(int x, int y)
+{
+	for (Organizm*& organizm : *organizmy)
+	{
+		if (organizm->GetPozycjaX() == x && organizm->GetPozycjaY() == y)
+		{
+			return organizm;
+		}
+	}
+}
+
+std::string Swiat::GetTypOrganizmu(Organizm* organizm)
+{
+	if (dynamic_cast<Czlowiek*>(organizm))
+	{
+		return "Czlowiek";
+	}
+	else if (dynamic_cast<Antylopa*>(organizm))
+	{
+		return "Antylopa";
+	}
+	else if (dynamic_cast<Lis*>(organizm))
+	{
+		return "Lis";
+	}
+	else if (dynamic_cast<Owca*>(organizm))
+	{
+		return "Owca";
+	}
+	else if (dynamic_cast<Wilk*>(organizm))
+	{
+		return "Wilk";
+	}
+	else if (dynamic_cast<Zolw*>(organizm))
+	{
+		return "Zolw";
+	}
+	else if (dynamic_cast<BarszczSosnowskiego*>(organizm))
+	{
+		return "Barszcz Sosnowskiego";
+	}
+	else if (dynamic_cast<Guarana*>(organizm))
+	{
+		return "Guarana";
+	}
+	else if (dynamic_cast<Mlecz*>(organizm))
+	{
+		return "Mlecz";
+	}
+	else if (dynamic_cast<Trawa*>(organizm))
+	{
+		return "Trawa";
+	}
+	else if (dynamic_cast<WilczeJagody*>(organizm))
+	{
+		return "Wilcze Jagody";
+	}
+}
+
+int Swiat::GetDlougoscOrganizmow()
+{
+	return organizmy->size();
 }
 
 Swiat::~Swiat()

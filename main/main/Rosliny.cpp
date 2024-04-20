@@ -118,7 +118,7 @@ void Roslina::Akcja()
 	}
 }
 
-void Roslina::Kolizja()
+void Roslina::Kolizja(Organizm* organizmy)
 {
 }
 

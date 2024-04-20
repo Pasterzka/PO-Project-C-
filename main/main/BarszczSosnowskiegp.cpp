@@ -3,6 +3,7 @@
 BarszczSosnowskiego::BarszczSosnowskiego(int pozycjaX, int pozycjaY, Swiat& swiat)
 	:Roslina(swiat)
 {
+	Organizm::sila = 0;
 	Organizm::pozycjaX = pozycjaX;
 	Organizm::pozycjaY = pozycjaY;
 	Organizm::swiat = swiat;
@@ -13,7 +14,7 @@ void BarszczSosnowskiego::Akcja()
 	Roslina::Akcja();
 }
 
-void BarszczSosnowskiego::Kolizja()
+void BarszczSosnowskiego::Kolizja(Organizm* organizmy)
 {
 }
 

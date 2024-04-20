@@ -15,7 +15,7 @@ void Wilk::Akcja()
 	Zwierze::Akcja();
 }
 
-void Wilk::Kolizja()
+void Wilk::Kolizja(Organizm* organizmy)
 {
 }
 

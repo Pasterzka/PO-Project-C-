@@ -1,5 +1,6 @@
 #include "Funkcje.h"
 #include <Windows.h>
+#include "Organizm.h"
 
 void Gotoxy(unsigned x, unsigned y)
 {

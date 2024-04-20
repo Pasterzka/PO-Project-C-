@@ -45,7 +45,7 @@ void Antylopa::Akcja()
 	}
 }
 
-void Antylopa::Kolizja()
+void Antylopa::Kolizja(Organizm* organizmy)
 {
 }
 

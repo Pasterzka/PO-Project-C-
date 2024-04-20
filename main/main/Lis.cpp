@@ -15,7 +15,7 @@ void Lis::Akcja()
 	Zwierze::Akcja();
 }
 
-void Lis::Kolizja()
+void Lis::Kolizja(Organizm* organizmy)
 {
 }
 

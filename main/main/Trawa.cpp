@@ -8,7 +8,7 @@ Trawa::Trawa(int pozycjaX, int pozycjaY, Swiat& swiat)
 	Organizm::swiat = swiat;
 }
 
-void Trawa::Kolizja()
+void Trawa::Kolizja(Organizm* organizmy)
 {
 }
 

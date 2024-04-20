@@ -41,10 +41,42 @@ void Zwierze::Akcja()
 	}
 }
 
-void Zwierze::Kolizja()
+void Zwierze::Kolizja(Organizm* organizmy)
 {
 }
 
 void Zwierze::Wypisz()
+{
+}
+
+void Zwierze::RuchN()
+{
+}
+
+void Zwierze::RuchE()
+{
+}
+
+void Zwierze::RuchS()
+{
+}
+
+void Zwierze::RuchW()
+{
+}
+
+void Zwierze::RuchNE()
+{
+}
+
+void Zwierze::RuchNW()
+{
+}
+
+void Zwierze::RuchSE()
+{
+}
+
+void Zwierze::RuchSW()
 {
 }

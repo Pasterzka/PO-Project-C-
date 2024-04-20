@@ -15,7 +15,7 @@ void Owca::Akcja()
 	Zwierze::Akcja();
 }
 
-void Owca::Kolizja()
+void Owca::Kolizja(Organizm* organizmy)
 {
 }
 

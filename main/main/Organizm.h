@@ -20,8 +20,11 @@ public:
 	int GetPozycjaY() const;
 	void Dorastanie();
 	int getWiek();
+	int getInicjatywa() const;
+	void setSila(int i);
+	int getSila();
 	virtual void Akcja() = 0;
-	virtual void Kolizja() = 0;
+	virtual void Kolizja(Organizm* organizmy) = 0;
 	virtual void Wypisz();
 	//~Organizm();
 };

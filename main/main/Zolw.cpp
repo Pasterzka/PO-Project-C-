@@ -18,7 +18,7 @@ void Zolw::Akcja()
 	}
 }
 
-void Zolw::Kolizja()
+void Zolw::Kolizja(Organizm* organizmy)
 {
 }
 

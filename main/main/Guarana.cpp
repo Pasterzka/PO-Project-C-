@@ -13,8 +13,9 @@ void Guarana::Akcja()
 	Roslina::Akcja();
 }
 
-void Guarana::Kolizja()
+void Guarana::Kolizja(Organizm* organizmy)
 {
+	organizmy->setSila(3);
 }
 
 void Guarana::Wypisz()
