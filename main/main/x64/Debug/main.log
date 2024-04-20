@@ -1,2 +1,6 @@
-﻿  main.cpp
+﻿  Swiat.cpp
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(46,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(51,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(56,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(60,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
   main.vcxproj -> D:\STUDIA\PO\Projekty\C++\main\x64\Debug\main.exe

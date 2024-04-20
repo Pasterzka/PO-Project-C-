@@ -14,7 +14,8 @@ private:
 	std::vector<Organizm*>* organizmy;
 	unsigned wysokosc;
 	unsigned szerokosc;
-
+	std::string log;
+	int tura;
 public:
 	Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* organizmy);
 	//World(unsigned width, unsigned height);
@@ -23,5 +24,9 @@ public:
 	unsigned GetSzerokosc() const;
 	void NastêpnaTura();
 	void Wypisz();
+	bool OrganizmXY(int x, int y);
+	void CzyscLog();
+	void DodajLog(std::string log);
+	void DorastanieStart();
 	~Swiat();
 };

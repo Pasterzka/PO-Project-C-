@@ -19,11 +19,20 @@
     <Filter Include="Pliki nagłówkowe\Organizmy\Zwierze">
       <UniqueIdentifier>{cd0047e2-fb7c-46e2-a540-a0f6e7e427db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Organizmy\Rosliny">
+      <UniqueIdentifier>{62aa6e98-6fb0-4743-b0ed-7fe118bcd37f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\main">
+      <UniqueIdentifier>{b06b42c6-fc22-49e2-800c-95372c3f03e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Rosliny">
+      <UniqueIdentifier>{82788feb-2ce8-4a80-b1cc-7057eb35e8fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Zwierzeta">
+      <UniqueIdentifier>{216b27b8-0bf3-47cb-8426-71836767ffc3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="Funkcje.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
@@ -33,11 +42,47 @@
     <ClCompile Include="Organizm.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Pliki źródłowe\main</Filter>
+    </ClCompile>
+    <ClCompile Include="Rosliny.cpp">
+      <Filter>Pliki źródłowe\main</Filter>
+    </ClCompile>
     <ClCompile Include="Zwierze.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\main</Filter>
+    </ClCompile>
+    <ClCompile Include="BarszczSosnowskiegp.cpp">
+      <Filter>Pliki źródłowe\Rosliny</Filter>
+    </ClCompile>
+    <ClCompile Include="Guarana.cpp">
+      <Filter>Pliki źródłowe\Rosliny</Filter>
+    </ClCompile>
+    <ClCompile Include="Mlecz.cpp">
+      <Filter>Pliki źródłowe\Rosliny</Filter>
+    </ClCompile>
+    <ClCompile Include="Trawa.cpp">
+      <Filter>Pliki źródłowe\Rosliny</Filter>
+    </ClCompile>
+    <ClCompile Include="WilczeJagody.cpp">
+      <Filter>Pliki źródłowe\Rosliny</Filter>
+    </ClCompile>
+    <ClCompile Include="Antylopa.cpp">
+      <Filter>Pliki źródłowe\Zwierzeta</Filter>
+    </ClCompile>
+    <ClCompile Include="Lis.cpp">
+      <Filter>Pliki źródłowe\Zwierzeta</Filter>
     </ClCompile>
     <ClCompile Include="Czlowiek.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\Zwierzeta</Filter>
+    </ClCompile>
+    <ClCompile Include="Owca.cpp">
+      <Filter>Pliki źródłowe\Zwierzeta</Filter>
+    </ClCompile>
+    <ClCompile Include="Wilk.cpp">
+      <Filter>Pliki źródłowe\Zwierzeta</Filter>
+    </ClCompile>
+    <ClCompile Include="Zolw.cpp">
+      <Filter>Pliki źródłowe\Zwierzeta</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +103,39 @@
     </ClInclude>
     <ClInclude Include="Czlowiek.h">
       <Filter>Pliki nagłówkowe\Organizmy\Zwierze</Filter>
+    </ClInclude>
+    <ClInclude Include="Owca.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Zwierze</Filter>
+    </ClInclude>
+    <ClInclude Include="Wilk.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Zwierze</Filter>
+    </ClInclude>
+    <ClInclude Include="Lis.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Zwierze</Filter>
+    </ClInclude>
+    <ClInclude Include="Zolw.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Zwierze</Filter>
+    </ClInclude>
+    <ClInclude Include="Antylopa.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Zwierze</Filter>
+    </ClInclude>
+    <ClInclude Include="Trawa.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Rosliny</Filter>
+    </ClInclude>
+    <ClInclude Include="Mlecz.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Rosliny</Filter>
+    </ClInclude>
+    <ClInclude Include="Rosliny.h">
+      <Filter>Pliki nagłówkowe\Organizmy</Filter>
+    </ClInclude>
+    <ClInclude Include="Guarana.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Rosliny</Filter>
+    </ClInclude>
+    <ClInclude Include="BarszczSosnowskiegp.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Rosliny</Filter>
+    </ClInclude>
+    <ClInclude Include="WilczeJagody.h">
+      <Filter>Pliki nagłówkowe\Organizmy\Rosliny</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

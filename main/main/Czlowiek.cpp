@@ -69,7 +69,7 @@ void Czlowiek::Kolizja()
 
 void Czlowiek::Wypisz()
 {
-	Gotoxy(Organizm::pozycjaX+1, Organizm::pozycjaY+3);
+	Organizm::Wypisz();
 	std::cout << 'C';
 }
 
