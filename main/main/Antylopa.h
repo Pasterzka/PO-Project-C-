@@ -8,4 +8,15 @@ public:
 	void Kolizja(Organizm* organizmy) override;
 	void Wypisz() override;
 	~Antylopa();
+
+
+	void RuchN() override;
+	void RuchE() override;
+	void RuchS() override;
+	void RuchW() override;
+
+	void RuchNW() override;
+	void RuchNE() override;
+	void RuchSE() override;
+	void RuchSW() override;
 };

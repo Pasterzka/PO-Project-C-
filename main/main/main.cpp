@@ -21,17 +21,19 @@ int main()
 	std::vector<Organizm*> organizmy;
 
 	Swiat swiat( 20, 20, &organizmy);
-	organizmy.push_back(new Owca(3, 4, swiat));
-	//organizmy.push_back(new Owca(4, 4, swiat));
+	//organizmy.push_back(new Wilk(3, 4, swiat));
+	//organizmy.push_back(new Wilk(4, 4, swiat));
 	//organizmy.push_back(new Lis(2, 2, swiat));
-	organizmy.push_back(new Zolw(1, 2, swiat));
-	organizmy.push_back(new Trawa(2, 1, swiat));
+	//organizmy.push_back(new Zolw(1, 2, swiat));
+	organizmy.push_back(new Trawa(2, 2, swiat));
+	organizmy.push_back(new Trawa(1, 2, swiat));
 	//organizmy.push_back(new WilczeJagody(1, 1, swiat));
 	organizmy.push_back(new Mlecz(20, 20, swiat));
-	organizmy.push_back(new BarszczSosnowskiego(1, 1, swiat)); 
-	//organizmy.push_back(new Czlowiek(2, 2, swiat));
-	organizmy.push_back(new Wilk(4, 4, swiat));
-	//organizmy.push_back(new Antylopa(1, 1, swiat));
+	//organizmy.push_back(new BarszczSosnowskiego(1, 1, swiat)); 
+	organizmy.push_back(new Czlowiek(1, 3, swiat));
+	//organizmy.push_back(new Owca(5, 6, swiat));
+	//organizmy.push_back(new Owca(8, 6, swiat));
+	organizmy.push_back(new Antylopa(2, 3, swiat));
 
 	swiat.DorastanieStart();
 	do

@@ -201,7 +201,12 @@ void Czlowiek::RuchN()
 					
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
-					log = "2Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					swiat.DodajLog(log);
 				}
@@ -272,6 +277,11 @@ void Czlowiek::RuchE()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);
 				}
@@ -342,6 +352,12 @@ void Czlowiek::RuchS()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY++;
 					swiat.DodajLog(log);
 				}
@@ -412,6 +428,11 @@ void Czlowiek::RuchW()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaX--;
 					swiat.DodajLog(log);
 				}
@@ -483,6 +504,11 @@ void Czlowiek::RuchNW()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					Organizm::pozycjaX--;
 					swiat.DodajLog(log);
@@ -556,6 +582,11 @@ void Czlowiek::RuchNE()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);
@@ -630,6 +661,11 @@ void Czlowiek::RuchSE()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY++;
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);
@@ -704,6 +740,11 @@ void Czlowiek::RuchSW()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);

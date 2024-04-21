@@ -318,6 +318,11 @@ void Zwierze::RuchN()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					swiat.DodajLog(log);
 				}
@@ -333,9 +338,8 @@ void Zwierze::RuchN()
 				{
 					if (this->wiek > 2 && przeciwnik->getWiek() > 2)
 					{
-						//tutaj bêdzie kolizja
+						Zwierze::Kolizja(przeciwnik);
 					}
-					Zwierze::Kolizja(przeciwnik);
 				}
 				else if (swiat.CzyOdbil(this) && nazwa == "Zolw")
 				{
@@ -401,6 +405,11 @@ void Zwierze::RuchE()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa +" z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);
 				}
@@ -484,6 +493,11 @@ void Zwierze::RuchS()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY++;
 					swiat.DodajLog(log);
 				}
@@ -570,6 +584,11 @@ void Zwierze::RuchW()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaX--;
 					swiat.DodajLog(log);
 				}
@@ -655,6 +674,11 @@ void Zwierze::RuchNE()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa +" z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);
@@ -743,6 +767,11 @@ void Zwierze::RuchNW()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY--;
 					Organizm::pozycjaX--;
 					swiat.DodajLog(log);
@@ -801,7 +830,7 @@ void Zwierze::RuchSE()
 	int noweX = pozycjaX + 1;
 	int stareY = pozycjaY;
 	int stareX = pozycjaX;
-	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
+	if (pozycjaY != swiat.GetWysokosc() && pozycjaX != swiat.GetSzerokosc())
 	{
 		
 		if (!swiat.OrganizmXY(noweX, noweY))
@@ -831,6 +860,11 @@ void Zwierze::RuchSE()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
 					Organizm::pozycjaY++;
 					Organizm::pozycjaX++;
 					swiat.DodajLog(log);
@@ -889,13 +923,13 @@ void Zwierze::RuchSW()
 	int stareY = pozycjaY;
 	int stareX = pozycjaX;
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
-	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
+	if (pozycjaY != swiat.GetWysokosc() && pozycjaX != 1)
 	{
 		
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
-			Organizm::pozycjaY--;
-			Organizm::pozycjaX++;
+			Organizm::pozycjaY++;
+			Organizm::pozycjaX--;
 			std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ").\n";
 			swiat.DodajLog(log);
 		}
@@ -919,8 +953,13 @@ void Zwierze::RuchSW()
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
-					Organizm::pozycjaY--;
-					Organizm::pozycjaX++;
+					if (nazwa == "Barszcz Sosnowskiego")
+					{
+						log += thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";
+
+					}
+					Organizm::pozycjaY++;
+					Organizm::pozycjaX--;
 					swiat.DodajLog(log);
 				}
 				else {
@@ -952,8 +991,8 @@ void Zwierze::RuchSW()
 					std::string log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
-					Organizm::pozycjaY--;
-					Organizm::pozycjaX++;
+					Organizm::pozycjaY++;
+					Organizm::pozycjaX--;
 				}
 				else {
 					log = thisNazwa + " z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") chcac przejsc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zostal zniszczony przez " + nazwa + ".\n";

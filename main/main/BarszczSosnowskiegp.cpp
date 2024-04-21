@@ -5,7 +5,7 @@
 BarszczSosnowskiego::BarszczSosnowskiego(int pozycjaX, int pozycjaY, Swiat& swiat)
 	:Roslina(swiat)
 {
-	Organizm::sila = 0;
+	Organizm::sila = 10;
 	Organizm::inicjatywa = 0;
 	Organizm::pozycjaX = pozycjaX;
 	Organizm::pozycjaY = pozycjaY;

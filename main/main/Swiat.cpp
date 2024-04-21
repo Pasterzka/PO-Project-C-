@@ -25,6 +25,12 @@ Swiat::Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* orga
 void Swiat::DodajOrganizm(Organizm* organizm)
 {
 	this->organizmy->push_back(organizm);
+	std::sort(organizmy->begin(), organizmy->end(), [](Organizm* a, Organizm* b) {
+		return a->getInicjatywa() > b->getInicjatywa(); });
+	if (organizm->getInicjatywa()>(*organizmy)[globalIndexl]->getInicjatywa())
+	{
+		globalIndexl++;
+	}
 }
 
 unsigned Swiat::GetWysokosc() const
