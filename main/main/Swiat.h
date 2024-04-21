@@ -15,6 +15,7 @@ private:
 	unsigned wysokosc;
 	unsigned szerokosc;
 	std::string log;
+	int globalIndexl;
 	int tura;
 public:
 	Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* organizmy);

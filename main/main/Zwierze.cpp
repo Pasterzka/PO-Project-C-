@@ -284,13 +284,14 @@ void Zwierze::Wypisz()
 
 void Zwierze::RuchN()
 {
+
+	std::string thisNazwa = swiat.GetTypOrganizmu(this);
+	int noweY = pozycjaY - 1;
+	int noweX = pozycjaX;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	if (pozycjaY != 1)
 	{
-		std::string thisNazwa = swiat.GetTypOrganizmu(this);
-		int noweY = pozycjaY - 1;
-		int noweX = pozycjaX;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaY--;
@@ -330,7 +331,7 @@ void Zwierze::RuchN()
 			{
 				if (swiat.CzyKolizja(this, przeciwnik))
 				{
-					if (this->wiek>2 && przeciwnik->getWiek()>2)
+					if (this->wiek > 2 && przeciwnik->getWiek() > 2)
 					{
 						//tutaj bêdzie kolizja
 					}
@@ -359,17 +360,22 @@ void Zwierze::RuchN()
 			}
 		}
 	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
+	}
 }
 
 void Zwierze::RuchE()
 {
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
+
+	int noweY = pozycjaY;
+	int noweX = pozycjaX + 1;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	if (pozycjaY != swiat.GetSzerokosc())
 	{
-		int noweY = pozycjaY;
-		int noweX = pozycjaX + 1;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaX++;
@@ -437,18 +443,22 @@ void Zwierze::RuchE()
 			}
 		}
 	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
+	}
 }
 
 void Zwierze::RuchS()
 {
-
+	int noweY = pozycjaY + 1;
+	int noweX = pozycjaX;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
 	if (pozycjaY != swiat.GetWysokosc())
 	{
-		int noweY = pozycjaY + 1;
-		int noweX = pozycjaX;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
+		
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaY++;
@@ -516,11 +526,18 @@ void Zwierze::RuchS()
 			}
 		}
 	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
+	}
 }
 
 void Zwierze::RuchW()
 {
-
+	int noweY = pozycjaY;
+	int noweX = pozycjaX - 1;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
 	if (pozycjaX != 1)
 	{
@@ -594,6 +611,9 @@ void Zwierze::RuchW()
 				}
 			}
 		}
+	}else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
 	}
 }
 
@@ -601,12 +621,13 @@ void Zwierze::RuchNE()
 {
 
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
+	int noweY = pozycjaY - 1;
+	int noweX = pozycjaX + 1;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
 	{
-		int noweY = pozycjaY - 1;
-		int noweX = pozycjaX + 1;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
+		
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaY--;
@@ -678,18 +699,23 @@ void Zwierze::RuchNE()
 			}
 		}
 	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
+	}
 }
 
 void Zwierze::RuchNW()
 {
 
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
+	int noweY = pozycjaY - 1;
+	int noweX = pozycjaX - 1;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	if (pozycjaY != 1 && pozycjaX != 1)
 	{
-		int noweY = pozycjaY - 1;
-		int noweX = pozycjaX - 1;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
+		
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaY--;
@@ -761,18 +787,23 @@ void Zwierze::RuchNW()
 			}
 		}
 	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
+	}
 }
 
 void Zwierze::RuchSE()
 {
 
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
+	int noweY = pozycjaY + 1;
+	int noweX = pozycjaX + 1;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
 	{
-		int noweY = pozycjaY + 1;
-		int noweX = pozycjaX + 1;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
+		
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaY++;
@@ -844,19 +875,23 @@ void Zwierze::RuchSE()
 			}
 		}
 	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
+	}
 
 }
 
 void Zwierze::RuchSW()
 {
-
+	int noweY = pozycjaY + 1;
+	int noweX = pozycjaX - 1;
+	int stareY = pozycjaY;
+	int stareX = pozycjaX;
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
 	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
 	{
-		int noweY = pozycjaY + 1;
-		int noweX = pozycjaX - 1;
-		int stareY = pozycjaY;
-		int stareX = pozycjaX;
+		
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
 			Organizm::pozycjaY--;
@@ -927,5 +962,9 @@ void Zwierze::RuchSW()
 				}
 			}
 		}
+	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(stareX) + ", " + std::to_string(stareY) + ") nieudany ruch.\n";
+		swiat.DodajLog(log);
 	}
 }

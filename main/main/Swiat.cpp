@@ -44,13 +44,13 @@ void Swiat::NastêpnaTura()
 	tura++;
 	std::sort(organizmy->begin(), organizmy->end(), [](Organizm* a, Organizm* b) {
 		return a->getInicjatywa() > b->getInicjatywa(); });
-	for (int i = 0; i < organizmy->size(); i++)
+	for (this->globalIndexl = 0; this->globalIndexl < organizmy->size(); this->globalIndexl++)
 	{
-		if ((*organizmy)[i]->getWiek()>0)
+		if ((*organizmy)[this->globalIndexl]->getWiek()>0)
 		{
-			(*organizmy)[i]->Akcja();
+			(*organizmy)[this->globalIndexl]->Akcja();
 		}
-		(*organizmy)[i]->Dorastanie();
+		(*organizmy)[this->globalIndexl]->Dorastanie();
 	}
 
 }
@@ -147,6 +147,10 @@ void Swiat::UsunOrganizm(int index)
 	//	delete (*organizmy)[index]; // Zwolnienie pamiêci zaalokowanej na obiekt
 	//	organizmy->erase(organizmy->begin() + index); // Usuniêcie wskaŸnika z wektora
 	//}
+	if (this->globalIndexl>index)
+	{
+		this->globalIndexl--;
+	}
 	(*organizmy)[index]->SetInicjatywa(-1);
 	std::sort(organizmy->begin(), organizmy->end(), [](Organizm* a, Organizm* b) {
 		return a->getInicjatywa() > b->getInicjatywa(); });

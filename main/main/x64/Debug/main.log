@@ -1,2 +1,29 @@
-﻿  main.cpp
+﻿  Antylopa.cpp
+  BarszczSosnowskiegp.cpp
+  Czlowiek.cpp
+  Funkcje.cpp
+D:\STUDIA\PO\Projekty\C++\main\main\Funkcje.cpp(7,20): warning C4838: konwersja z „unsigned int” do „SHORT” wymaga konwersji zawężającej
+D:\STUDIA\PO\Projekty\C++\main\main\Funkcje.cpp(7,27): warning C4838: konwersja z „unsigned int” do „SHORT” wymaga konwersji zawężającej
+  Guarana.cpp
+  Lis.cpp
+  Mlecz.cpp
+  Organizm.cpp
+  Owca.cpp
+  Rosliny.cpp
+  Swiat.cpp
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(64,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(69,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(74,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(78,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(221,24): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  Trawa.cpp
+  WilczeJagody.cpp
+  Wilk.cpp
+  Zolw.cpp
+  Zwierze.cpp
+  main.cpp
+  Generowanie kodu...
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(169): warning C4715: "Swiat::GetOrganizm”: niewszystkie ścieżki kodu zwracają wartość
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(140): warning C4715: "Swiat::getIndexOrganizmu”: niewszystkie ścieżki kodu zwracają wartość
+D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(217): warning C4715: "Swiat::GetTypOrganizmu”: niewszystkie ścieżki kodu zwracają wartość
   main.vcxproj -> D:\STUDIA\PO\Projekty\C++\main\x64\Debug\main.exe
