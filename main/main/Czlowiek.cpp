@@ -17,6 +17,18 @@ Czlowiek::Czlowiek(int pozycjaX, int pozycjaY, Swiat& swiat)
 	this->zdolnosc = 10;
 }
 
+Czlowiek::Czlowiek(int inicjatywa, int sila, int pozycjaX, int pozycjaY, int wiek, Swiat& swiat)
+	:Zwierze(swiat)
+{
+	Organizm::sila = sila;
+	Organizm::inicjatywa = inicjatywa;
+	Organizm::pozycjaX = pozycjaX;
+	Organizm::pozycjaY = pozycjaY;
+	Organizm::wiek = wiek;
+	Organizm::swiat = swiat;
+	this->zdolnosc = 10;
+}
+
 void Czlowiek::Akcja()
 {
 	CialoPalenie();
@@ -246,7 +258,7 @@ void Czlowiek::RuchN()
 
 void Czlowiek::RuchE()
 {
-	if (pozycjaY != swiat.GetSzerokosc())
+	if (pozycjaX != swiat.GetSzerokosc())
 	{
 		int noweY = pozycjaY;
 		int noweX = pozycjaX + 1;
@@ -628,7 +640,7 @@ void Czlowiek::RuchNE()
 
 void Czlowiek::RuchSE()
 {
-	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
+	if (pozycjaY != swiat.GetWysokosc() && pozycjaX != swiat.GetSzerokosc())
 	{
 		int noweY = pozycjaY + 1;
 		int noweX = pozycjaX + 1;
@@ -707,7 +719,7 @@ void Czlowiek::RuchSE()
 
 void Czlowiek::RuchSW()
 {
-	if (pozycjaY != 1 && pozycjaX != swiat.GetSzerokosc())
+	if (pozycjaY != swiat.GetWysokosc() && pozycjaX != 1)
 	{
 		int noweY = pozycjaY + 1;
 		int noweX = pozycjaX - 1;

@@ -12,6 +12,17 @@ BarszczSosnowskiego::BarszczSosnowskiego(int pozycjaX, int pozycjaY, Swiat& swia
 	Organizm::swiat = swiat;
 }
 
+BarszczSosnowskiego::BarszczSosnowskiego(int inicjatywa, int sila, int pozycjaX, int pozycjaY, int wiek, Swiat& swiat)
+	:Roslina(swiat)
+{
+	Organizm::sila = sila;
+	Organizm::inicjatywa = inicjatywa;
+	Organizm::pozycjaX = pozycjaX;
+	Organizm::pozycjaY = pozycjaY;
+	Organizm::swiat = swiat;
+	Organizm::wiek = wiek;
+}
+
 void BarszczSosnowskiego::Akcja()
 {
 	Zdolnosc();

@@ -11,6 +11,17 @@ Zolw::Zolw(int pozycjaX, int pozycjaY, Swiat& swiat)
 	Organizm::swiat = swiat;
 }
 
+Zolw::Zolw(int inicjatywa, int sila, int pozycjaX, int pozycjaY, int wiek, Swiat& swiat)
+	:Zwierze(swiat)
+{
+	Organizm::inicjatywa = inicjatywa;
+	Organizm::sila = sila;
+	Organizm::pozycjaX = pozycjaX;
+	Organizm::pozycjaY = pozycjaY;
+	Organizm::swiat = swiat;
+	Organizm::wiek = wiek;
+}
+
 void Zolw::Akcja()
 {
 	if (Szansa())

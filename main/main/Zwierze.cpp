@@ -378,7 +378,7 @@ void Zwierze::RuchE()
 	int noweX = pozycjaX + 1;
 	int stareY = pozycjaY;
 	int stareX = pozycjaX;
-	if (pozycjaY != swiat.GetSzerokosc())
+	if (pozycjaX != swiat.GetSzerokosc())
 	{
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{

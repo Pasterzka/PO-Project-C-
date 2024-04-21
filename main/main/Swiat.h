@@ -19,7 +19,7 @@ private:
 	int tura;
 public:
 	Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* organizmy);
-	//World(unsigned width, unsigned height);
+	Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* organizmy, int tura);
 	void DodajOrganizm(Organizm* organizmy);
 	unsigned GetWysokosc() const;
 	unsigned GetSzerokosc() const;
@@ -37,5 +37,10 @@ public:
 	int GetDlougoscOrganizmow();
 	bool CzyOdbil(Organizm* organizm);
 	bool CzyKolizja(Organizm* organizm, Organizm* organizm2);
+	void Zapisz();
+	void Wczytaj();
+	void wczytajOrganizm(std::string nazwa, int inicjatywa, int sila, int x, int y, int wiek);
+	void SetSzerokosc(int szerokosc);
+	void SetWysokosc(int wysokosc);
 	~Swiat();
 };

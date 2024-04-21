@@ -1,20 +1,6 @@
-﻿  Antylopa.cpp
-D:\STUDIA\PO\Projekty\C++\main\main\Antylopa.cpp(305,15): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Antylopa.cpp(393,15): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Antylopa.cpp(665,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Antylopa.cpp(759,15): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Antylopa.cpp(759,53): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Antylopa.cpp(853,15): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-  Swiat.cpp
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(70,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(75,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(80,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(84,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(227,24): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
-  Zwierze.cpp
-  main.cpp
+﻿  Lis.cpp
+  Owca.cpp
+  Wilk.cpp
+  Zolw.cpp
   Generowanie kodu...
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(146): warning C4715: "Swiat::getIndexOrganizmu”: niewszystkie ścieżki kodu zwracają wartość
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(175): warning C4715: "Swiat::GetOrganizm”: niewszystkie ścieżki kodu zwracają wartość
-D:\STUDIA\PO\Projekty\C++\main\main\Swiat.cpp(223): warning C4715: "Swiat::GetTypOrganizmu”: niewszystkie ścieżki kodu zwracają wartość
   main.vcxproj -> D:\STUDIA\PO\Projekty\C++\main\x64\Debug\main.exe

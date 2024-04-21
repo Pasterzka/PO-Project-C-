@@ -13,6 +13,17 @@ Lis::Lis(int pozycjaX, int pozycjaY, Swiat& swiat)
 	Organizm::swiat = swiat;
 }
 
+Lis::Lis(int inicjatywa, int sila, int pozycjaX, int pozycjaY, int wiek, Swiat& swiat)
+	:Zwierze(swiat)
+{
+	Organizm::wiek = wiek;
+	Organizm::inicjatywa = inicjatywa;
+	Organizm::sila = sila;
+	Organizm::pozycjaX = pozycjaX;
+	Organizm::pozycjaY = pozycjaY;
+	Organizm::swiat = swiat;
+}
+
 void Lis::Akcja()
 {
 	int kierunek = rand() % 8;

@@ -22,6 +22,11 @@ Swiat::Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* orga
 {
 }
 
+Swiat::Swiat(unsigned wysokosc, unsigned szerokosc, std::vector<Organizm*>* organizmy, int tura)
+	:wysokosc(wysokosc), szerokosc(szerokosc), organizmy(organizmy), tura(tura)
+{
+}
+
 void Swiat::DodajOrganizm(Organizm* organizm)
 {
 	this->organizmy->push_back(organizm);
@@ -246,6 +251,119 @@ bool Swiat::CzyKolizja(Organizm* organizm1, Organizm* organizm2)
 	}
 	return false;
 }
+
+#include <fstream>
+
+void Swiat::Zapisz()
+{
+	std::ofstream plik_out("zapis.txt");
+	if (plik_out.is_open()) {
+		plik_out << wysokosc << std::endl;
+		plik_out << szerokosc << std::endl;
+		plik_out << tura << std::endl;
+		plik_out << this->GetDlougoscOrganizmow() << std::endl;
+		for (Organizm*& organizm : *organizmy)
+		{
+			plik_out << this->GetTypOrganizmu(organizm) << " " << organizm->getInicjatywa() << " " << organizm->getSila() << " " << organizm->GetPozycjaX() << " " << organizm->GetPozycjaY() << " " << organizm->getWiek() << std::endl;
+		}
+		std::cout << "Gra zosta³ zapisany do pliku." << std::endl;
+	}
+	else {
+		std::cout << "Nie mo¿na otworzyæ pliku do zapisu!" << std::endl;
+	}
+}
+
+void Swiat::Wczytaj()
+{
+	std::ifstream plik_in("zapis.txt");
+	int liczba, inicjatywa, sila, x, y, wiek;
+	std::string nazwa;
+	if (plik_in.is_open()) {
+		
+		plik_in >> wysokosc;
+		plik_in >> szerokosc;
+		plik_in >> tura;
+		log = "";
+		plik_in >> liczba;
+		for (int i = 0; i < liczba; i++)
+		{
+			plik_in >> nazwa;
+			plik_in >> inicjatywa;
+			plik_in >> sila;
+			plik_in >> x;
+			plik_in >> y;
+			plik_in >> wiek;
+			
+			this->wczytajOrganizm(nazwa, inicjatywa, sila, x, y, wiek);
+		}
+
+
+		std::cout << "Gra zosta³ odczytany z pliku." << std::endl;
+	}
+	else {
+		std::cout << "Nie mo¿na otworzyæ pliku do odczytu!" << std::endl;
+	}
+}
+
+void Swiat::wczytajOrganizm(std::string nazwa, int inicjatywa, int sila, int x, int y, int wiek)
+{
+	if (nazwa=="Czlowiek")
+	{
+		this->organizmy->push_back(new Czlowiek( inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa=="Antylopa")
+	{
+		this->organizmy->push_back(new Antylopa(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa=="Lis")
+	{
+		this->organizmy->push_back(new Lis(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Owca")
+	{
+		this->organizmy->push_back(new Owca(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Wilk")
+	{
+		this->organizmy->push_back(new Wilk(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Zolw")
+	{
+		this->organizmy->push_back(new Zolw(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Barszcz Sosnowskiego")
+	{
+		this->organizmy->push_back(new BarszczSosnowskiego(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Trawa")
+	{
+		this->organizmy->push_back(new Trawa(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Mlecz")
+	{
+		this->organizmy->push_back(new Mlecz(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Guarana")
+	{
+		this->organizmy->push_back(new Guarana(inicjatywa, sila, x, y, wiek, *this));
+	}
+	else if (nazwa == "Wilcze Jagody")
+	{
+		this->organizmy->push_back(new WilczeJagody(inicjatywa, sila, x, y, wiek, *this));
+	}
+	
+}
+
+void Swiat::SetSzerokosc(int szerokosc)
+{
+	this->szerokosc = szerokosc;
+}
+
+void Swiat::SetWysokosc(int wysokosc)
+{
+	this->wysokosc = wysokosc;
+}
+
 
 Swiat::~Swiat()
 {

@@ -22,6 +22,17 @@ Antylopa::Antylopa(int pozycjaX, int pozycjaY, Swiat& swiat)
 	Organizm::swiat = swiat;
 }
 
+Antylopa::Antylopa(int inicjatywa, int sila, int pozycjaX, int pozycjaY, int wiek, Swiat& swiat)
+	:Zwierze(swiat)
+{
+	Organizm::sila = sila;
+	Organizm::inicjatywa = inicjatywa;
+	Organizm::pozycjaX = pozycjaX;
+	Organizm::pozycjaY = pozycjaY;
+	Organizm::swiat = swiat;
+	Organizm::wiek = wiek;
+}
+
 void Antylopa::Akcja()
 {
 	int kierunek = rand() % 8;
@@ -302,7 +313,7 @@ void Antylopa::RuchE()
 	int noweX = pozycjaX + 2;
 	int stareY = pozycjaY;
 	int stareX = pozycjaX;
-	if (pozycjaY < swiat.GetSzerokosc()-1)
+	if (pozycjaX < swiat.GetSzerokosc()-1)
 	{
 		if (!swiat.OrganizmXY(noweX, noweY))
 		{
@@ -748,7 +759,6 @@ void Antylopa::RuchNE()
 }
 
 void Antylopa::RuchSE()
-
 {
 
 	std::string thisNazwa = swiat.GetTypOrganizmu(this);
