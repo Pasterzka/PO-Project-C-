@@ -7,5 +7,6 @@ public:
 	void Akcja() override;
 	void Kolizja(Organizm* organizmy) override;
 	void Wypisz() override;
+	void Zdolnosc();
 	~BarszczSosnowskiego();
 };

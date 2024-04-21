@@ -52,6 +52,7 @@ void Swiat::NastêpnaTura()
 		}
 		(*organizmy)[i]->Dorastanie();
 	}
+
 }
 
 void Swiat::Wypisz()
@@ -140,12 +141,16 @@ int Swiat::getIndexOrganizmu(int x, int y)
 
 void Swiat::UsunOrganizm(int index)
 {
-	// SprawdŸ, czy index jest poprawny
-	if (index >= 0 && static_cast<size_t>(index) < organizmy->size()) {
-		// Usuñ element ze wskazanego indeksu
-		delete (*organizmy)[index]; // Zwolnienie pamiêci zaalokowanej na obiekt
-		organizmy->erase(organizmy->begin() + index); // Usuniêcie wskaŸnika z wektora
-	}
+	//// SprawdŸ, czy index jest poprawny
+	//if (index >= 0 && static_cast<size_t>(index) < organizmy->size()) {
+	//	// Usuñ element ze wskazanego indeksu
+	//	delete (*organizmy)[index]; // Zwolnienie pamiêci zaalokowanej na obiekt
+	//	organizmy->erase(organizmy->begin() + index); // Usuniêcie wskaŸnika z wektora
+	//}
+	(*organizmy)[index]->SetInicjatywa(-1);
+	std::sort(organizmy->begin(), organizmy->end(), [](Organizm* a, Organizm* b) {
+		return a->getInicjatywa() > b->getInicjatywa(); });
+	organizmy->pop_back();
 }
 
 Organizm* Swiat::GetOrganizm(int x, int y)
@@ -210,6 +215,26 @@ std::string Swiat::GetTypOrganizmu(Organizm* organizm)
 int Swiat::GetDlougoscOrganizmow()
 {
 	return organizmy->size();
+}
+
+bool Swiat::CzyOdbil(Organizm* organizm)
+{
+	if (organizm->getSila()<5)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool Swiat::CzyKolizja(Organizm* organizm1, Organizm* organizm2)
+{
+	std::string nazwa1 = this->GetTypOrganizmu(organizm1);
+	std::string nazwa2 = this->GetTypOrganizmu(organizm2);
+	if (nazwa1 == nazwa2)
+	{
+		return true;
+	}
+	return false;
 }
 
 Swiat::~Swiat()

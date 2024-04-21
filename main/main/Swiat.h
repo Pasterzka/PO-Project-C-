@@ -34,5 +34,7 @@ public:
 	Organizm* GetOrganizm(int x, int y);
 	std::string GetTypOrganizmu(Organizm* organizm);
 	int GetDlougoscOrganizmow();
+	bool CzyOdbil(Organizm* organizm);
+	bool CzyKolizja(Organizm* organizm, Organizm* organizm2);
 	~Swiat();
 };

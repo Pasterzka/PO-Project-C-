@@ -47,6 +47,15 @@ void Antylopa::Akcja()
 
 void Antylopa::Kolizja(Organizm* organizmy)
 {
+	std::string nazwa = swiat.GetTypOrganizmu(organizmy);
+	std::string log = "";
+	int x = pozycjaX;
+	int y = pozycjaY;
+	int los = rand() % 2;
+	if (los ==1)
+	{
+		//dokoñcz
+	}
 }
 
 void Antylopa::Wypisz()

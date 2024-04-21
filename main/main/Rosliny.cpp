@@ -19,6 +19,7 @@ Roslina::Roslina(Swiat& swiat)
 
 void Roslina::Akcja()
 {
+	std::string thisNazwa = swiat.GetTypOrganizmu(this);
 	int szansa = rand() % 100 + 1;
 	if (szansa> SZANSA_ROZMNOZENIA)
 	{
@@ -114,7 +115,19 @@ void Roslina::Akcja()
 					swiat.DodajLog(log);
 				}
 			}
+			else {
+				std::string log = thisNazwa + " z (" + std::to_string(pozycjaX) + " " + std::to_string(pozycjaY) + ") nie udalo sie rozmnozyc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ").\n";
+				swiat.DodajLog(log);
+			}
 		}
+		else {
+			std::string log = thisNazwa + " z (" + std::to_string(pozycjaX) + " " + std::to_string(pozycjaY) + ") nie udalo sie rozmnozyc na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ").\n";
+			swiat.DodajLog(log);
+		}
+	}
+	else {
+		std::string log = thisNazwa + " z (" + std::to_string(pozycjaX) + " " + std::to_string(pozycjaY) + ") za mala szansa na rozmnozenie.\n";
+		swiat.DodajLog(log);
 	}
 }
 

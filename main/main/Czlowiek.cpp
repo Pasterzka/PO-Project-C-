@@ -4,6 +4,7 @@
 #include "Rosliny.h"
 
 #include <string>
+#include "Zolw.h"
 
 Czlowiek::Czlowiek(int pozycjaX, int pozycjaY, Swiat& swiat)
 	:Zwierze(swiat)
@@ -200,7 +201,7 @@ void Czlowiek::RuchN()
 					
 					przeciwnik->Kolizja(this);
 					swiat.UsunOrganizm(swiat.getIndexOrganizmu(przeciwnikX, przeciwnikY));
-					log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
+					log = "2Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareY) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") niszczac " + nazwa + ".\n";
 					Organizm::pozycjaY--;
 					swiat.DodajLog(log);
 				}
@@ -212,7 +213,16 @@ void Czlowiek::RuchN()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -273,7 +283,15 @@ void Czlowiek::RuchE()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -335,7 +353,15 @@ void Czlowiek::RuchS()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -397,7 +423,15 @@ void Czlowiek::RuchW()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -461,7 +495,15 @@ void Czlowiek::RuchNW()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -526,7 +568,15 @@ void Czlowiek::RuchNE()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -592,7 +642,15 @@ void Czlowiek::RuchSE()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);
@@ -658,7 +716,15 @@ void Czlowiek::RuchSW()
 			}
 			else if (dynamic_cast<Zwierze*>(przeciwnik))
 			{
-				if (this->sila >= przeciwnik->getSila())
+				if (swiat.CzyOdbil(this) && nazwa == "Zolw")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (nazwa == "Antylopa")
+				{
+					przeciwnik->Kolizja(this);
+				}
+				else if (this->sila >= przeciwnik->getSila())
 				{
 					std::string log = "Czlowiek z (" + std::to_string(stareX) + " " + std::to_string(stareX) + ") przeszedl  na (" + std::to_string(noweX) + " " + std::to_string(noweY) + ") zabijajac  " + nazwa + ".\n";
 					swiat.DodajLog(log);

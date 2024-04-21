@@ -8,7 +8,7 @@ class Organizm
 {
 protected:
 	int sila;
-	int inicjatywa;
+	double inicjatywa;
 	int pozycjaX;
 	int pozycjaY;
 	int wiek;
@@ -18,13 +18,16 @@ public:
 	Organizm(Swiat& swiat);
 	int GetPozycjaX() const;
 	int GetPozycjaY() const;
+	void SetPozycjaX(int x);
+	void SetPozycjaY(int y);
 	void Dorastanie();
 	int getWiek();
-	int getInicjatywa() const;
+	double getInicjatywa() const;
 	void setSila(int i);
 	int getSila();
 	virtual void Akcja() = 0;
 	virtual void Kolizja(Organizm* organizmy) = 0;
 	virtual void Wypisz();
+	void SetInicjatywa(int i);
 	//~Organizm();
 };

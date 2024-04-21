@@ -15,6 +15,16 @@ int Organizm::GetPozycjaY() const
 	return pozycjaY;
 }
 
+void Organizm::SetPozycjaX(int x)
+{
+	pozycjaX = x;
+}
+
+void Organizm::SetPozycjaY(int y)
+{
+	pozycjaY = y;
+}
+
 void Organizm::Dorastanie()
 {
 	this->wiek++;
@@ -25,7 +35,7 @@ int Organizm::getWiek()
 	return this->wiek;
 }
 
-int Organizm::getInicjatywa() const
+double Organizm::getInicjatywa() const
 {
 	return this->inicjatywa;
 }
@@ -44,5 +54,10 @@ int Organizm::getSila()
 void Organizm::Wypisz()
 {
 	Gotoxy(pozycjaX + 1, pozycjaY + 3);
+}
+
+void Organizm::SetInicjatywa(int i)
+{
+	this->inicjatywa = i;
 }
 
